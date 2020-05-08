@@ -9,6 +9,7 @@ class Circle
     double radius;
 
   public:
+    Circle(); // constructor, which is still a public member function
     void setRadius(double);
 
   //getter function AKA accessor
@@ -27,6 +28,10 @@ class Circle
 };
 
   //function implementation section
+    Circle::Circle()
+    {
+      cout << "Hello, I am a circle. My area is: " << endl;
+    }
     void Circle::setRadius(double r)
     {
       radius = r;
