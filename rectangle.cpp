@@ -39,4 +39,27 @@ void Rectangle::setWidth(double w)
   }
 }
 
-// double Rectangle::
+double Rectangle::getLength()
+{
+  return length;
+}
+
+double Rectangle::getWidth()
+{
+  return width;
+}
+
+double Rectangle::calcArea()
+{
+  return length * width;
+}
+
+int main () {
+
+  Rectangle rectangle1;
+  rectangle1.setLength(2);
+  rectangle1.setWidth(3);
+  cout << "The length of the rectangle is " << rectangle1.getLength() << " and the width is " << rectangle1.getWidth() << ", so the area is " << rectangle1.calcArea() << ".";
+
+  return 0;
+}
