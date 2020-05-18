@@ -62,6 +62,76 @@ class Demo
       cout << "This is a Demo constructor without any parameters." << endl;
     };
 
+    class Rectangle
+    {
+      private:
+        double length;
+        double width;
+
+      public:
+        void setLength(double);
+        void setWidth(double);
+        double getLength();
+        double getWidth();
+        double calcArea();
+    };
+
+    void Rectangle::setLength(double l)
+    {
+      if (l >= 0.0)
+        length = l;
+      else
+      {
+        length = 1.0;
+        cout << "Invalid length. Using default value of 1.0" << endl;
+      }
+    }
+
+    void Rectangle::setWidth(double w)
+    {
+      if (w >= 0.0)
+        width = w;
+      else
+      {
+        width = 1.0;
+        cout << "Invalid width. Using default value of 1.0" << endl;
+      }
+    }
+
+    double Rectangle::getLength()
+    {
+      return length;
+    }
+
+    double Rectangle::getWidth()
+    {
+      return width;
+    }
+
+    double Rectangle::calcArea()
+    {
+      return length * width;
+    }
+
+    class Carpet
+    {
+      private:
+        double pricePerSqYd; //used to set price per sq yd of carpet
+        Rectangle size; //size is an instance of the Rectangle class
+
+      public:
+        void setPricePerYd(double p)
+        { pricePerSqYd = p; }
+
+        void setDimensions(double l, double w)
+        {
+          size.setLength(l/3);
+          size.setWidth(w/3);
+        }
+
+        double getTotalPrice()
+        { return size.calcArea() * pricePerSqYd; }
+    };
 
 
 #endif
