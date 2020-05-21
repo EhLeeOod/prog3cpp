@@ -22,6 +22,14 @@ int main()
   double length;
   double width;
 
+  int hours[10];
+
+  hours[0] = 1;
+
+  cout << endl << endl << hours[0];
+
+  cout << "test" << endl;
+
   cout << "Room length in feet: ";
   cin >> length;
   cout << "Room width in feet: ";
@@ -33,6 +41,8 @@ int main()
   purchase.setPricePerYd(pricePerYd);
 
   cout << endl << "The total price of the " << length << " x " << width << " carpet is $" << purchase.getTotalPrice() << "." << endl;
+
+
 
   return 0;
 }
