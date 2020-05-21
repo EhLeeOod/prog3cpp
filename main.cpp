@@ -8,6 +8,16 @@ using namespace std;
 
 int main()
 {
+  const int TEST_INT = 10;
+  int hours[TEST_INT];
+
+  hours[0] = 1;
+  hours[1] = 2;
+
+  cout << endl << endl << hours[0] << endl << hours[1];
+
+  cout << "test" << endl;
+
   Demo demoObject;
   cout << endl << endl;
   Demo demoObjectWithParams(17);
@@ -22,13 +32,7 @@ int main()
   double length;
   double width;
 
-  int hours[10];
 
-  hours[0] = 1;
-
-  cout << endl << endl << hours[0];
-
-  cout << "test" << endl;
 
   cout << "Room length in feet: ";
   cin >> length;
